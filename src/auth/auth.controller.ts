@@ -12,6 +12,6 @@ export class AuthController {
       body.password,
     );
     if (!user) throw new UnauthorizedException('Invalid credentials');
-    return await this.authService.login(user);
+    return this.authService.login(user);
   }
 }
